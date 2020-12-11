@@ -395,7 +395,8 @@ function next() {
         showNextImgs();
     }
     else {          // if current game turn is BOT, display results
-        alert("Finished");
+        //alert("Finished");
+        console.log("Finished");
         document.getElementById('botScore').innerHTML = "Bot score: " + stats[BOT]["score"] + " / " + totalImgs;
         document.getElementById('userScore').innerHTML = "User score: " + stats[PLAYER]["score"] + " / " + totalImgs;
         showResult();
