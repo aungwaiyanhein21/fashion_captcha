@@ -49,8 +49,8 @@ function init() {
     // initialize with images
     showNextImgs();
     
-    console.log("stats");
-    console.log(stats);
+    //console.log("stats");
+    //console.log(stats);
     
 }
 
@@ -126,8 +126,8 @@ function generateImgsPath() {
     
     }
     */
-    console.log(imgsPathObj);
-    console.log(origImgsPathObj);
+    //console.log(imgsPathObj);
+    //console.log(origImgsPathObj);
 }
 
 /*** add class name to select box for user to select ***/
@@ -268,7 +268,7 @@ function checkAnswers() {
             //var tensorImg = tf.browser.fromPixels(imgElements[i],1).resizeNearestNeighbor([28, 28]).toFloat().div(tf.scalar(255)).expandDims();
             var prediction;
 
-            console.log(tf.browser.fromPixels(imgElements[i],1).asType('float32'));
+            //console.log(tf.browser.fromPixels(imgElements[i],1).asType('float32'));
            
             var tensorImg = tf.browser.fromPixels(imgElements[i],1).asType('float32').resizeBilinear([28, 28]).reshape([1, 28, 28, 1]);
             
@@ -348,7 +348,7 @@ function showNextImgs() {
 
     randImagesPaths = randPaths;
     
-    console.log(randImagesPaths);
+    //console.log(randImagesPaths);
     
     showImages(randPaths);
 
@@ -387,7 +387,7 @@ function next() {
         // generate same set of images as human
         imgsPathObj = JSON.parse(JSON.stringify(origImgsPathObj));
      
-        console.log(imgsPathObj);
+        //console.log(imgsPathObj);
 
         showStats();
 
@@ -401,7 +401,7 @@ function next() {
         showResult();
 
 
-        console.log(incorrectAnswersImg);
+        //console.log(incorrectAnswersImg);
     }
 }
 
