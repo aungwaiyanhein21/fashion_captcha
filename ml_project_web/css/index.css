@@ -1,0 +1,198 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+
+
+body{	
+    font-family:Calibri, sans-serif;
+
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    
+}
+
+
+/*** header ***/
+header {
+    text-align: center;
+    padding: 20px;
+    border: 1px solid black;
+}
+
+
+/*** main body ***/
+main {
+    background-color: grey;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    flex-grow: 1;
+}
+
+section {
+    width: 80%;
+}
+
+.stats-area {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    padding: 10px;
+    color: white;
+}
+
+.images-container {
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    background-color: white;
+}
+
+.img-selector-container {
+    /*
+    width: 350px;
+    height: 350px;
+    */
+    width: 280px;
+    height: 280px;
+
+    /*
+    width: 270px;
+    height: 270px;
+    */
+
+    background-color: grey;
+    margin: 5px;
+
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.img-cont {
+    width: 200px;
+    height: 200px;
+    /*
+    width: 200px;
+    height: 200px;
+    */
+    background-color: white;
+}
+
+.actual-image {
+    width:100%;
+    height:100%;
+    object-fit: contain;
+}
+
+.dummy-small-image {
+    display: none;
+    width: 28px;
+    height: 28px;
+    object-fit: contain;
+}
+
+.answer-select-cont {
+    margin-top: 10px;
+    padding: 5px;
+
+    color: white;
+}
+
+.answer-cont {
+    display: none;
+}
+
+
+
+.next-button-area {
+    display: flex;
+    justify-content: flex-end;
+    padding: 10px;
+    height: 60px;
+}
+
+.next-button {
+    font-size: 24px;
+    display: none;
+}
+
+button {
+    width: 50px;
+    cursor: pointer;
+}
+
+.correct {
+    border: 4px solid green;
+}
+
+.incorrect {
+    border: 4px solid red;
+}
+
+
+
+/*** Result Area ***/
+.result-area {
+    display: none;
+
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+/*** taken from a site starts - using this to be quick ***/
+/*** Credit: https://www.quackit.com/html/html_editors/scratchpad/?example=/css/flexbox/tutorial/align_form_elements_with_flexbox_example_2 ***/
+.wrapper {
+    background-color: whitesmoke;
+    list-style-type: none;
+    padding: 0;
+    border-radius: 3px;
+    color: black;
+  }
+  .form-row {
+    display: flex;
+    justify-content: flex-end;
+    padding: .5em;
+  }
+  .form-row > label {
+    padding: .5em 1em .5em 0;
+    flex: 1;
+  }
+  .form-row > input {
+    flex: 2;
+  }
+  .form-row > input,
+  .form-row > button {
+    padding: .5em;
+  }
+  .form-row > button {
+   background: gray;
+   color: white;
+   border: 0;
+  }
+/*** taken from a site ends ***/
+
+
+/*** footer ***/
+footer {
+    width: 100%;
+
+    text-align: center;
+    border-top: 1px solid black;
+    padding: 5px;
+
+}
+

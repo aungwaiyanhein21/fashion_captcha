@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Fashion Captcha</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="shortcut icon" href="#" />
+
+        <link rel="stylesheet" href="css/index.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+        <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@2.0.0/dist/tf.min.js"></script>
+
+        <script src="js/img_class.js"></script>
+        <script src="js/index.js"></script>
+    </head>
+    <body>
+        <header>
+            <h1>Can Bot beat Human in Captcha?</h1>
+        </header>
+        <main>
+            <section id="gameArea">
+                <div class="stats-area" style="background-color:teal;">
+                    <p id="score">Score: 0/100</p>
+                    <p id="completed">Completed: 0/100</p>
+                    <p id="turn">Turn: Human</p>
+                </div>
+
+                <div class="images-container">
+                    <div class="img-selector-container">
+                        <div class="img-cont">
+                            <img class="actual-image">
+                            <img class="dummy-small-image">
+                        </div>
+                        <div class="answer-select-cont">
+                            <select class="select-class">
+                                <option value="random" selected >Random</option>
+                            </select>
+                            <div class="answer-cont">
+                                <p class="actual-class-label">Actual Label: </p>
+                                <p class="choice-label">User's choice: </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="img-selector-container">
+                        <div class="img-cont">
+                            <img class="actual-image">
+                            <img class="dummy-small-image">
+                        </div>
+                        <div class="answer-select-cont">
+                            <select class="select-class">
+                                <option value="random" selected>Random</option>
+                            </select>
+                            <div class="answer-cont">
+                                <p class="actual-class-label">Actual Label: </p>
+                                <p class="choice-label">User's choice: </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="img-selector-container">
+                        <div class="img-cont">
+                            <img class="actual-image">
+                            <img class="dummy-small-image">
+                        </div>
+                        <div class="answer-select-cont">
+                            <select class="select-class">
+                                <option value="random" selected>Random</option>
+                            </select>
+                            <div class="answer-cont">
+                                <p class="actual-class-label">Actual Label: </p>
+                                <p class="choice-label">User's choice: </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="img-selector-container">
+                        <div class="img-cont">
+                            <img class="actual-image">
+                            <img class="dummy-small-image">
+                        </div>
+                        <div class="answer-select-cont">
+                            <select class="select-class">
+                                <option value="random" selected>Random</option>
+                            </select>
+                            <div class="answer-cont">
+                                <p class="actual-class-label">Actual Label: </p>
+                                <p class="choice-label">User's choice: </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="img-selector-container">
+                        <div class="img-cont">
+                            <img class="actual-image">
+                            <img class="dummy-small-image">
+                        </div>
+                        <div class="answer-select-cont">
+                            <select class="select-class">
+                                <option value="random" selected>Random</option>
+                            </select>
+                            <div class="answer-cont">
+                                <p class="actual-class-label">Actual Label: </p>
+                                <p class="choice-label">User's choice: </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="img-selector-container">
+                        <div class="img-cont">
+                            <img class="actual-image">
+                            <img class="dummy-small-image">
+                        </div>
+                        <div class="answer-select-cont">
+                            <select class="select-class">
+                                <option value="random" selected>Random</option>
+                            </select>
+                            <div class="answer-cont">
+                                <p class="actual-class-label">Actual Label: </p>
+                                <p class="choice-label">User's choice: </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="next-button-area" style="background-color: teal;">
+                    <button onclick="checkAnswers()" id="checkButton">Check</button>
+                    <button onclick="showNextImgs()" class="next-button" id="nextButton"><i class="fa fa-arrow-right"></i></button>
+                </div>
+            </section>
+
+            <section id="resultArea" class="result-area">
+                <h2>Thank you very much for your time</h2><br><br>
+                <h3>Result Summary:</h3>
+                <p id="userScore">User Score: 0/30</p> 
+                <p id="botScore">Bot Score: 0/30</p><br><br>
+                
+                <p>Please screenshot it and send me please.</p>
+                
+                <!--
+                <h3>Submit Result</h3><br>
+               
+                <form method="post" action="mailto:" enctype=”multipart/form-data”>
+                    <ul class="wrapper">
+                        <li class="form-row">
+                            <label>Name (optional): </label>
+                            <input type="text" name="name">
+                        </li>
+                        <li class="form-row">
+                          <label>User Score: </label>
+                          <input type="text" readonly value="0" name="user_score">
+                        </li>
+                        <li class="form-row">
+                          <label>Bot Score: </label>
+                          <input type="text" readonly value="0" name="bot_score">
+                        </li>
+                        <li class="form-row">
+                          <button type="submit">Submit</button>
+                        </li>
+                    </ul>
+                
+                </form>
+                -->
+                
+            </section>
+        
+        </main>
+        <footer>
+            <small>Copyright © 2020 Aung Wai Yan Hein</small>
+        </footer>
+    </body>
+</html>
