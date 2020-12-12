@@ -16,11 +16,59 @@
     </head>
     <body>
         <header>
-            <h1>Can Bot beat Human in Captcha?</h1>
+            <h1>Can Bot beat Human in CAPTCHA?</h1>
         </header>
         <main>
-            <section id="gameArea">
-                <div class="stats-area" style="background-color:teal;">
+            <section class="introduction">
+                <h3>Introduction</h3><br>
+                <p>
+                    One of the ways to prevent bots scraping the website or attempting automated access to the website is to use CAPTCHA to prove whether it is a real human who is accessing the website.
+                </p><br>
+                <p>
+                    This project is intended to test the idea whether the bot can beat human in cracking simple CAPTCHA.
+                </p><br>
+                <p>
+                    I am using <a href="https://keras.io/api/datasets/fashion_mnist/">fashion mnist dataset</a>.
+                </p><br>
+                <p>
+                    The dataset contains 28 by 28 grayscale images in 10 categories. There are 60,000 images in train set and 10,000 images in test set.
+                </p><br>
+                <p>
+                    The 10 categories are as follows:
+                    <ol style="padding-left: 30px;">
+                        <li>T-shirt/Top</li>
+                        <li>Trousers</li>
+                        <li>Pullover</li>
+                        <li>Dress</li>
+                        <li>Coat</li>
+                        <li>Sandal</li>
+                        <li>Shirt</li>
+                        <li>Sneaker</li>
+                        <li>Bag</li>
+                        <li>Ankle boot</li>
+                    </ol>
+                </p><br>
+                <p>
+                    In this web application, I will be testing using random 30 images taken from 100 images. I have taken random 100 images out of the test set.
+                </p><br>
+                <p>
+                    The model is trained using CNN (Convolutional Neural Network). I used all training examples to train the model and tested the model on 9900 images (excluded 100 random images). The model has a train accuracy of 0.9190 and test accuracy of 0.9111. 
+                </p><br>
+
+                <p>
+                    Can you beat the bot?
+                </p><br>
+
+
+                <div class="play-button-area">
+                    <button class="play-button" onclick="playGame()">Play</button>
+                    
+                </div>
+                
+            </section>
+
+            <section id="gameArea" style="display: none;">
+                <div class="stats-area">
                     <p id="score">Score: 0/100</p>
                     <p id="completed">Completed: 0/100</p>
                     <p id="turn">Turn: Human</p>
@@ -35,6 +83,7 @@
                         <div class="answer-select-cont">
                             <select class="select-class">
                                 <option value="random" selected >Random</option>
+                                <option disabled>----------</option>
                             </select>
                             <div class="answer-cont">
                                 <p class="actual-class-label">Actual Label: </p>
@@ -50,6 +99,7 @@
                         <div class="answer-select-cont">
                             <select class="select-class">
                                 <option value="random" selected>Random</option>
+                                <option disabled>----------</option>
                             </select>
                             <div class="answer-cont">
                                 <p class="actual-class-label">Actual Label: </p>
@@ -65,6 +115,7 @@
                         <div class="answer-select-cont">
                             <select class="select-class">
                                 <option value="random" selected>Random</option>
+                                <option disabled>----------</option>
                             </select>
                             <div class="answer-cont">
                                 <p class="actual-class-label">Actual Label: </p>
@@ -80,6 +131,7 @@
                         <div class="answer-select-cont">
                             <select class="select-class">
                                 <option value="random" selected>Random</option>
+                                <option disabled>----------</option>
                             </select>
                             <div class="answer-cont">
                                 <p class="actual-class-label">Actual Label: </p>
@@ -95,6 +147,7 @@
                         <div class="answer-select-cont">
                             <select class="select-class">
                                 <option value="random" selected>Random</option>
+                                <option disabled>----------</option>
                             </select>
                             <div class="answer-cont">
                                 <p class="actual-class-label">Actual Label: </p>
@@ -110,6 +163,71 @@
                         <div class="answer-select-cont">
                             <select class="select-class">
                                 <option value="random" selected>Random</option>
+                                <option disabled>----------</option>
+                            </select>
+                            <div class="answer-cont">
+                                <p class="actual-class-label">Actual Label: </p>
+                                <p class="choice-label">User's choice: </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="img-selector-container">
+                        <div class="img-cont">
+                            <img class="actual-image">
+                            <img class="dummy-small-image">
+                        </div>
+                        <div class="answer-select-cont">
+                            <select class="select-class">
+                                <option value="random" selected>Random</option>
+                                <option disabled>----------</option>
+                            </select>
+                            <div class="answer-cont">
+                                <p class="actual-class-label">Actual Label: </p>
+                                <p class="choice-label">User's choice: </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="img-selector-container">
+                        <div class="img-cont">
+                            <img class="actual-image">
+                            <img class="dummy-small-image">
+                        </div>
+                        <div class="answer-select-cont">
+                            <select class="select-class">
+                                <option value="random" selected>Random</option>
+                                <option disabled>----------</option>
+                            </select>
+                            <div class="answer-cont">
+                                <p class="actual-class-label">Actual Label: </p>
+                                <p class="choice-label">User's choice: </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="img-selector-container">
+                        <div class="img-cont">
+                            <img class="actual-image">
+                            <img class="dummy-small-image">
+                        </div>
+                        <div class="answer-select-cont">
+                            <select class="select-class">
+                                <option value="random" selected>Random</option>
+                                <option disabled>----------</option>
+                            </select>
+                            <div class="answer-cont">
+                                <p class="actual-class-label">Actual Label: </p>
+                                <p class="choice-label">User's choice: </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="img-selector-container">
+                        <div class="img-cont">
+                            <img class="actual-image">
+                            <img class="dummy-small-image">
+                        </div>
+                        <div class="answer-select-cont">
+                            <select class="select-class">
+                                <option value="random" selected>Random</option>
+                                <option disabled>----------</option>
                             </select>
                             <div class="answer-cont">
                                 <p class="actual-class-label">Actual Label: </p>
@@ -119,7 +237,10 @@
                     </div>
                 </div>
 
-                <div class="next-button-area" style="background-color: teal;">
+                <div class="next-button-area">
+                    <span></span>
+                    <p id="pageNum"></p>
+
                     <button onclick="checkAnswers()" id="checkButton">Check</button>
                     <button onclick="showNextImgs()" class="next-button" id="nextButton"><i class="fa fa-arrow-right"></i></button>
                 </div>

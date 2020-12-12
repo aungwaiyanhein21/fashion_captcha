@@ -40,6 +40,24 @@ section {
     width: 80%;
 }
 
+
+/*** for intro ***/
+.introduction {
+    background-color: white;
+    padding: 20px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.play-button-area {
+    display: flex;
+    justify-content: center;
+}
+
+/*** for game area ***/
+
 .stats-area {
     display: flex;
     justify-content: space-between;
@@ -47,11 +65,13 @@ section {
 
     padding: 10px;
     color: white;
+
+    background-color:teal;
 }
 
 .images-container {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
     flex-direction: row;
     flex-wrap: wrap;
 
@@ -63,8 +83,12 @@ section {
     width: 350px;
     height: 350px;
     */
+    /*
     width: 280px;
     height: 280px;
+    */
+    width: 200px;
+    height: 200px;
 
     /*
     width: 270px;
@@ -81,8 +105,8 @@ section {
 }
 
 .img-cont {
-    width: 200px;
-    height: 200px;
+    width: 70px;
+    height: 70px;
     /*
     width: 200px;
     height: 200px;
@@ -118,9 +142,15 @@ section {
 
 .next-button-area {
     display: flex;
-    justify-content: flex-end;
+    /*justify-content: flex-end;*/
+    justify-content: space-between;
+    align-items: center;
     padding: 10px;
     height: 60px;
+
+    color: white;
+
+    background-color: teal;
 }
 
 .next-button {
@@ -130,6 +160,7 @@ section {
 
 button {
     width: 50px;
+    height: 40px;
     cursor: pointer;
 }
 

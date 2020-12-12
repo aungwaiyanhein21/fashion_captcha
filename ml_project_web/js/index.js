@@ -25,7 +25,9 @@ var stats = {};
 
 
 var totalImgs = 0;
-var noOfImagesShownEachTime = 6;
+var noOfImagesShownEachTime = 10;
+
+var currPageNo = 0;
 
 var model;
 
@@ -134,11 +136,30 @@ function generateImgsPath() {
 function addClassesToSelectBox() {
     var allSelectBoxArr = document.querySelectorAll(".select-class");
 
+    var classes = [];
+    var classDic = {};
+    for (var key in classLabelObj) {
+        classes.push(classLabelObj[key]);
+        classDic[classLabelObj[key]] = key;
+    }
+    // sort classes
+    classes.sort();
+    console.log(classes);
+
+    for (var i=0; i < allSelectBoxArr.length; i++) {
+        for (var j=0; j < classes.length; j++) {
+            var key = classDic[classes[j]];
+            allSelectBoxArr[i].options[allSelectBoxArr[i].options.length] = new Option(classes[j], key);
+        }
+    }
+
+    /* 
     for (var i=0; i < allSelectBoxArr.length; i++) {
         for (var key in classLabelObj) {
             allSelectBoxArr[i].options[allSelectBoxArr[i].options.length] = new Option(classLabelObj[key], key);
         }
     }
+    */
 }
 
 /*** randomly generate img and remove that path in imgsPathObj. Repeat for n times ***/
@@ -342,6 +363,16 @@ function showNextImgs() {
         return;
     }
 
+    if (gameTurn === PLAYER) {
+        // reset the selectbox
+
+        var selectBoxElements = document.getElementsByClassName('select-class');
+        for (var i=0; i < selectBoxElements.length; i++) {
+            selectBoxElements[i].selectedIndex = 0;
+        }
+
+    }
+
 
     var randPaths = getRandomImages();
 
@@ -356,7 +387,17 @@ function showNextImgs() {
 
     showHideAnswer(isShow = false);
 
+    updatePageNo();
+
 }
+
+/*** update page number so that users know how many page left to fill ***/
+function updatePageNo() {
+    currPageNo ++;
+
+    document.getElementById("pageNum").innerHTML = `Page ${currPageNo} of ${totalImgs/noOfImagesShownEachTime}`;
+}
+
 
 /*** show stats ***/
 function showStats() {
@@ -416,6 +457,8 @@ function resetImages() {
 
 
     incorrectAnswersImg = [];
+
+    currPageNo = 0;
 
 }
 
@@ -495,3 +538,8 @@ function showResult() {
     document.getElementById("resultArea").style.display = "flex";
 }
 
+/*** when use pressed play in introduction area ***/
+function playGame() {
+    document.querySelector('.introduction').style.display = "none";
+    document.getElementById('gameArea').style.display = "block";
+}

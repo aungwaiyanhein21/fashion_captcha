@@ -1,7 +1,7 @@
 /*** actual class label ***/
 classLabelObj = {
     0: "T-shirt/top",
-    1: "Trouser",
+    1: "Trousers",
     2: "Pullover",
     3: "Dress",
     4: "Coat",
