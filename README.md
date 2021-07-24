@@ -1,4 +1,6 @@
-# ml_project
+# Human Vs Bot in identifying Fashion images
+
+Demo Link: <https://aungwaiyanhein21.github.io/fashion_captcha/ml_project_web/>
 
 This project is about observing whether the "smart" bot can actually beat simple captcha by classifying images.
 I use fashion mnist dataset (https://keras.io/api/datasets/fashion_mnist/). I use all training set for training the model. For the testing set, I leave 100 images alone that will be used in web app for actually competing with human. 
