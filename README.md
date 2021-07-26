@@ -4,6 +4,19 @@ Demo Link: <https://aungwaiyanhein21.github.io/fashion_captcha/web_app/>
 
 <img src="images/human_turn.png" width=100% />
 
+<hr>
+
+## Flow
+<p>Human Turn</p>
+<img src="images/human_turn_flow.gif" width=100% />
+
+<p>Bot Turn</p>
+<img src="images/bot_turn_flow.gif" width=100% />
+
+
+
+<hr>
+
 ## Summary
 <p>
     A game where a player and a trained bot compete in classifying fashion images. 
@@ -16,16 +29,20 @@ Demo Link: <https://aungwaiyanhein21.github.io/fashion_captcha/web_app/>
 
 ## Why build it?
 <p>
-   
+    For fun!
+</p>
+<p>
+    I want to find out whether the machine learning model can help crack simple image captcha. 
 </p>
 
-
 <hr>
 
-## Functionality
+<!-- ## Functionality
+<p>
+    
+</p>
 
-
-<hr>
+<hr> -->
 
 ## Tech Stack
 <ul>
