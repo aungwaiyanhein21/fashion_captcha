@@ -2,32 +2,24 @@
 
 Demo Link: <https://aungwaiyanhein21.github.io/fashion_captcha/web_app/>
 
-<img src="images/human_turn.png" width=100% />
-
 <hr>
 
-## Flow
+<p>
+    A game where a player and a trained bot compete in classifying fashion images. 
+</p>
+<p>
+    I use fashion mnist dataset <a href="https://keras.io/api/datasets/fashion_mnist/">https://keras.io/api/datasets/fashion_mnist/</a>. I use all training set for training the model. For the test set, I leave 100 images that will be used in web app for actually competing with human. 
+</p>
+
 <p>Human Turn</p>
 <img src="images/human_turn_flow.gif" width=100% />
 
 <p>Bot Turn</p>
 <img src="images/bot_turn_flow.gif" width=100% />
 
-
-
 <hr>
 
-## Summary
-<p>
-    A game where a player and a trained bot compete in classifying fashion images. 
-</p>
-<p>
-    I use fashion mnist dataset (https://keras.io/api/datasets/fashion_mnist/). I use all training set for training the model. For the test set, I leave 100 images that will be used in web app for actually competing with human. 
-</p>
-
-<hr>
-
-## Why build it?
+## Motivation
 <p>
     For fun!
 </p>
@@ -36,13 +28,6 @@ Demo Link: <https://aungwaiyanhein21.github.io/fashion_captcha/web_app/>
 </p>
 
 <hr>
-
-<!-- ## Functionality
-<p>
-    
-</p>
-
-<hr> -->
 
 ## Tech Stack
 <ul>
